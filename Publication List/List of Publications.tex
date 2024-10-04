@@ -1,0 +1,117 @@
+\documentclass[a4paper, 13pt]{article}
+\usepackage[english]{babel}
+
+%Font issues
+\usepackage[T1]{fontenc}%allows one to use pipe sign, less than or equal, etc freely in tex file
+\usepackage{lmodern}   
+\usepackage{xcolor}%adds colors
+
+\usepackage{csquotes}
+
+
+%MathTools
+\usepackage{amsmath,amsthm,amssymb,amsfonts}%AMS PACKAGE
+\usepackage{mathtools}
+\usepackage{tensor}%adds \tensor and \indices
+\usepackage{tikz-cd}%adds diagrams
+\usepackage{esint}%\fint
+\usepackage{mathrsfs}%gives fancy mathscr
+\usepackage{thmtools}
+\usepackage{slashed}
+\usepackage{mathabx}
+
+\usepackage{bbm}
+\usepackage{microtype}
+\usepackage{accents}
+
+%General Structure tools
+\usepackage{enumitem}%enumerate package
+\usepackage[toc,page]{appendix}%adds appendix
+\usepackage{imakeidx}%allows one to maked indices in articles
+
+
+
+
+%Ref Tools
+\usepackage{crossreftools}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+
+
+
+%General Format
+\usepackage{emptypage}%removes numbers from empty pages
+\usepackage[a4paper,	bindingoffset=0in,		left=1.2in,		right=1.2in,	top=1in,	bottom=1in,	footskip=.25in]{geometry}
+%\parskip=20pt %Margin
+\usepackage{setspace}
+\onehalfspacing
+%\setlength\parindent{5pt}
+
+
+            
+%Bib            
+\usepackage[backend=biber,sorting=ynt,sortcites,autocite=inline, labelnumber=true]{biblatex}%References
+\addbibresource{../../Mathematics-Documents/GlobalLibrary.bib}            
+            
+            
+            
+%\usepackage{graphicx}%allows pictures \includegraphics{•}
+%\usepackage{numprint}%changes numbers format to add a decimal point every three digits etc
+%\usepackage{subfiles}%adds subfiles
+
+
+
+%Useless
+%\usepackage{setspace}
+\input{../../Mathematics-Documents/Commands_Tex/EngcommandsForArticle}
+\input{../../Mathematics-Documents/Commands_Tex/PersonalCommands}
+%\input{Packages}
+%\input{EngcommandsForArticle}
+%\input{PersonalCommands}
+\AtEveryBibitem{\clearfield{url}}
+%\usepackage{refcheck}
+
+
+\begin{document}
+\title{Liste de publications}
+\author{Omar Mohsen\footnote{{\footnotesize
+Paris-Saclay University, Paris, France
+\vskip-2pt E-mail: \href{mailto:omar.mohsen.fr@gmail.com}{\texttt{omar.mohsen.fr@gmail.com}}}}}
+\date{}
+\maketitle
+% 19K35 Kasparov theory ($KK$-theory)
+% 19K56 Index theory
+% 22A22 Topological groupoids (including differentiable and Lie groupoids)
+% 22A25 Representations of general topological groups and semigroups
+% 22E25 Nilpotent and solvable Lie groups
+% 46L87 Noncommutative differential geometry
+% 46L45 Decomposition theory for $C^*$-algebras
+% 46L80 $K$-theory and operator algebras (including cyclic theory)
+% 46L87 Noncommutative differential geometry
+% 47G30 Pseudodifferential operators	
+% 53C12 Foliations (differential geometric aspects)
+% 53C29 Issues of holonomy
+% 58J22 Exotic index theories
+% 58J40 Pseudodifferential and Fourier integral operators on manifolds
+% 53R30 Foliations; geometric theory
+% 58B34 Noncommutative geometry (�  la Connes)
+% 58H05 Pseudogroups and differentiable groupoids 
+% 93B18 Linearizations
+\nocite{MohsenBlowup}
+  \nocite{MohsenGrpTangent}
+  \nocite{MohsenIndex}
+  \nocite{MohsenIndexMuens}
+  \nocite{MohsenTangentCone}
+  \nocite{MohsenMaxHypo}
+  \nocite{MohsenChernSimons}
+  \nocite{MohsenWitten}
+  \nocite{MohsenConnesShwartz}
+ \nocite{MohsenConvolutionSingularFoliations}
+ \nocite{MohsenWodizki}
+
+
+\begin{refcontext}[sorting=nyt]
+\printbibliography[heading=none]
+\end{refcontext}
+\end{document}
