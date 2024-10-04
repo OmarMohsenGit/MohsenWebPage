@@ -20,6 +20,23 @@
 \usepackage{tabularx}
 \usepackage{tikz}
 \input{glyphtounicode}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% my added package for map marker
+\usepackage{fontawesome}
+
+
+\input{glyphtounicode}
 
 \begin{comment}
 I am by no means a professional when it comes to the CV's/resumes, I have
@@ -151,11 +168,9 @@ which heading appropriate for the document you are creating.
 \begin{minipage}[c]{0.6\textwidth}
     \textbf{\Huge \scshape{Omar Mohsen}} \\ \vspace{1pt} 
     % \scshape sets small capital letters, remove if desired
-    \small{+33 7 81 32 99 93} \\\small{01 Mars 1996}\\
-    \small{French}\\
-    \href{https://www.imo.universite-paris-saclay.fr/fr/}{Maître de conférence at universite of Paris-Saclay}\\
-    \href{mailto:omar.mohsen.fr@gmail.com}{omar.mohsen.fr@gmail.com} \\
-   \href{mailto:omar.mohsen@universite-paris-saclay.fr}{omar.mohsen@universite-paris-saclay.fr}\\ \href{https://sites.google.com/view/omar-mohsen-webpage/home}{https://sites.google.com/view/omar-mohsen-webpage/home} \\
+    \small{\faPhone +33 7 81 32 99 93} \\\small{01 Mars 1996 $|$ French}\\
+    \href{mailto:omar.mohsen.fr@gmail.com}{\underline{\faEnvelope\thinspace omar.mohsen.fr@gmail.com}} \\
+   \href{mailto:omar.mohsen@universite-paris-saclay.fr}{\underline{\faEnvelope\thinspace omar.mohsen@universite-paris-saclay.fr}}\\ \href{https://sites.google.com/view/omar-mohsen-webpage/home}{\underline{\faGoogle\thinspace https://sites.google.com/view/omar-mohsen-webpage/home}} \\
 \end{minipage}
 
 % Without picture
@@ -174,7 +189,7 @@ which heading appropriate for the document you are creating.
 \section{Scientific Career}
   \CVSubHeadingListStart
 \CVSubheading
-      {{Maître de conférence (research/teaching position)}}{September. 2021 -- Current}
+      {{\href{https://www.imo.universite-paris-saclay.fr/fr/}{\underline{Maître de conférence (research/teaching position)}}}}{September. 2021 -- Current}
       {University of Paris-Saclay}{France}   
     \CVSubheading
       {{Postdoc}}{September. 2019 -- August 2021}
@@ -187,10 +202,9 @@ which heading appropriate for the document you are creating.
   \CVSubHeadingListStart
     \CVSubheading
       {{PhD $|$ \emph{\small{Thesis defended in October 2018 under the direction of G. Skandalis}}}}{October 2015 -- October 2018}
-      {Paris Diderot university (currently Sorbonne Paris Cité). \\ 
-      More details in \href{https://theses.fr/2018USPCC200}{https://theses.fr/2018USPCC200}}{France}
+      {Sorbonne Paris Cité. More details in \href{https://theses.fr/2018USPCC200}{\underline{here}}}{France}
     \CVSubheading
-      {{ENS Diploma}}{2012 -- 2015}
+      {{ENS Diplome}}{2012 -- 2015}
       {École normale supérieure de Paris}{France}
     \CVSubheading
       {Master}{2013 -- 2015}
@@ -257,14 +271,15 @@ use item list as is shown in the work experience section.
 %      {What}{When}
 %      {School}{Where}
 \CVSubheadingshort
-{ \href{https://www.college-de-france.fr/fr/personne/omar-mohsen}{Prix Peccot from Collège de France}}{2024}
+{Our work on Helffer-Nourrigat's conjecture will be presented in a Bourbaki seminar by Debord}{2025}
 {}{}
-    \CVSubheadingshort
-      {Prix Jacques Herbrand from the french academy of sciences}{2024}
-      {}{}
-      \CVSubheadingshort
-      {Our work on Helffer-Nourrigat's conjecture will be presented in a Bourbaki seminar by Debord}{2025}
-      {}{}
+\CVSubheadingshort
+{ \href{https://www.college-de-france.fr/fr/personne/omar-mohsen}{\underline{Prix Peccot from Collège de France}}}{2024}
+{}{}
+   \CVSubheadingshort
+     {Prix Jacques Herbrand from the french academy of sciences}{2024}
+     {}{}
+
       \CVSubHeadingListEnd
  
 \section{Grants}
@@ -274,16 +289,16 @@ use item list as is shown in the work experience section.
 %      {School}{Where}
 \CVSubheading
 {ANR}{2023}
-{\href{https://anr.fr/Project-ANR-23-CE40-0016}{Part of the ANR team OPART}}{France}
+{\href{https://anr.fr/Project-ANR-23-CE40-0016}{\underline{Part of the ANR team OPART}}}{France}
     \CVSubheading
       {Région Ile de France, FSMP}{2015-2018}
       {PhD Grant}{France}
       \CVSubheading
       {Fondation Sciences Mathématiques de Paris (FSMP)}{2013-2015}
-      {Bourse d'excellence (Scholarship)}{France}
+      {Scholarship}{France}
        \CVSubheading
       {Fondation Mathématiques Jacques Hadamard (FMJH)}{2012}
-      {Bourse d'excellence (Scholarship)}{France}
+      {Scholarship}{France}
   \CVSubHeadingListEnd
   \section{Supervision}
   \CVSubHeadingListStart
@@ -347,7 +362,7 @@ use item list as is shown in the work experience section.
 \section{Scientific and administrative responsibilities}
  \CVSubHeadingListStart
  \CVSubheadingshort
-      {Member of PhD defense of Clement Cren under the direction of J.-M. Lescure}{2023 France}
+      {\href{https://theses.fr/s279397}{\underline{Member of PhD defense of Clement Cren under the direction of J.-M. Lescure}}}{2023 France}
   \CVSubheadingshort
       {Summer school YMC$^*$A, Organization member}{2021, Germany}
       \CVSubheadingshort

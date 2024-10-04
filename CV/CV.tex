@@ -1,0 +1,238 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% my added package for map marker
+\usepackage{fontawesome}
+
+
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Omar Mohsen} \\ \vspace{1pt}
+    01/03/1996 $|$ French Citizen $|$ \faMapMarker \thinspace Paris, France $|$ \faPhone \thinspace 07.81.32.99.93 $|$  \href{mailto:omar.mohsen.fr@gmail.com}{\underline{\faEnvelope\thinspace omar.mohsen.fr@gmail.com}}\\
+    \href{mailto:omar.mohsen@universite-paris-saclay.fr}{\underline{\faEnvelope\thinspace omar.mohsen@universite-paris-saclay.fr}} $|$ 
+    \href{https://sites.google.com/view/omar-mohsen-webpage/home}{\underline{\faGoogle https://sites.google.com/view/omar-mohsen-webpage/home}}
+    %\href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
+    %\href{https://github.com/OmarMohsenGit}{\underline{github.com/OmarMohsenGit}}
+
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Université Paris Cité}{Paris, France}
+      {PhD under the supervision of G. Skandalis.
+      More details in \href{https://theses.fr/2018USPCC200}{https://theses.fr/2018USPCC200}}{Sep. 2015 -- Oct. 2018}
+    \resumeSubheading
+      {Ecole Normale Supérieure Paris Ulm}{Paris, France}
+      {ENS Diploma}{Sep. 2012 -- Aug. 2015}
+      \resumeSubheading
+      {Paris-Saclay University}{Orsay, France}
+      {Master's degree}{Sep. 2013 -- Aug. 2015}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Career}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {Maïtre de conference in Mathematics (Research and Teaching position)}{Orsay, France}
+    {Paris-Saclay University}{Sep. 2021 -- Present}
+    \resumeSubheading
+      {Research Postdoc}{Muenster, Germany}
+      {Muenster University}{Sep. 2019 -- Aug.2021}
+    \resumeSubheading
+      {Temporary Teaching Position (ATER)}{Paris, France}
+      {Paris-Cité University}{Oct. 2018 -- Aug.2019}
+
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Articles}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {Tangent groupoid and tangent cones in sub-Riemannian geometry}{Duke Journal of mathematics}
+    \resumeProjectHeading
+          {Witten deformation using Lie groupoids}{Advances in mathematics}
+  
+    \resumeProjectHeading
+      {Index theorem for inhomogeneous hypoelliptic differential operators}{Muenster Journal of mathematics}
+      \resumeProjectHeading
+          {Chern Simons invariants in $K\!K$ theory}{Journal of functional analysis}
+          \resumeProjectHeading
+          {Differential operators on $C^*$-algebras and applications to smooth functional calculus}{Journal of functional analysis}
+          \resumeProjectHeading
+          {On the deformation groupoid of the inhomogeneous pseudo-differential calculus}{Bulletin of the L.M.S.}
+          \resumeProjectHeading
+          {Remarks on a groupoid approach to the Wodzicki residue and the Kontsevich-Vishik trace}{Submitted}
+          \resumeProjectHeading
+          {The convolution algebra of Schwarz kernels on a singular foliation}{Journal of Operator theory}
+          \resumeItemListStart
+            \resumeItem{Joint work with I. Androulidakis and R. Yuncken}
+            \resumeItemListEnd
+          \resumeProjectHeading
+          {A pseudodifferential calculus for maximally hypoelliptic operators and the Helffer-Nourrigat conjecture}{Submitted}
+          \resumeItemListStart
+          \resumeItem{Joint work with I. Androulidakis and R. Yuncken}
+          \resumeItemListEnd
+          \resumeProjectHeading
+          {Blow-up groupoid of singular foliations}{Submitted}
+          \resumeProjectHeading
+          {On the index of maximally hypoelliptic differential operators}{Submitted}
+    \resumeSubHeadingListEnd
+
+    \section{Supervision}
+    \resumeSubHeadingListStart
+
+  %    \CVSubheading
+  %      {What}{When}
+  %      {School}{Where}
+  \resumeProjectHeading
+  {Moudrik Chamoux  M2 thesis on deformation to the normal cone.}{2024}
+  \resumeProjectHeading
+  {Enzo Tanguide and Quentin Casella M1 thesis on singular homology}{ 2024}
+  \resumeProjectHeading
+  {Julie Capron M1 thesis on nuclear $C^*$-algebras}{ 2024}
+  \resumeProjectHeading
+  {Oleskii Shulga M1 thesis on amenable groups}{ 2024}
+  \resumeProjectHeading
+  {Anatole Dedecker M1 thesis on amenable groups}{ 2023}
+  \resumeProjectHeading
+  {Matiss Brunel, Quentin Giton and Flore le Roux L3 thesis on Poincare's rotation number}{2022}
+        \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, C++} \\
+     \textbf{Human Languages}{: English (C2), French (C2), Arabic (Fluent)} \\
+     \textbf{Developer Tools}{: Git, VS Code, IntelliJ} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
