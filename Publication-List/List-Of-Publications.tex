@@ -34,7 +34,12 @@
 
 %Ref Tools
 \usepackage{crossreftools}
-\usepackage{hyperref}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+            \usepackage{xcolor}
 \usepackage{cleveref}
 
 
@@ -74,11 +79,11 @@
 
 
 \begin{document}
-\title{Liste de publications}
-\author{Omar Mohsen\footnote{{\footnotesize
+\title{Publications List}
+\author{Omar Mohsen\thanks{
 Paris-Saclay University, Orsay, France
-\vskip-2pt E-mail: \href{mailto:omar.mohsen.fr@gmail.com}{\texttt{omar.mohsen.fr@gmail.com}}}}}
-\date{Last update \today}
+\vskip-2pt E-mail: \href{mailto:omar.mohsen.fr@gmail.com}{\texttt{omar.mohsen.fr@gmail.com}}}}
+\date{Last updated on \today}
 \maketitle
 % 19K35 Kasparov theory ($KK$-theory)
 % 19K56 Index theory

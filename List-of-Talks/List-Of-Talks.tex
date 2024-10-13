@@ -1,8 +1,12 @@
 \documentclass[a4paper, 13pt]{article}
 
 %\usepackage{refcheck}
-\usepackage{hyperref}
-\usepackage{xcolor}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+            \usepackage{xcolor}
 \makeatletter
 \Hy@AtBeginDocument{%
   \def\@pdfborder{0 0 1}% Overrides border definition set with colorlinks=true
@@ -11,17 +15,12 @@
 }
 \makeatother
 
-\hypersetup{%
-  colorlinks=true,% hyperlinks will be coloured
-  linkcolor=red,% hyperlink text will be green
-  linkbordercolor=red,% hyperlink border will be red
-}
 \begin{document}
 \title{List of talks}
-\author{Omar Mohsen\footnote{{\footnotesize
+\author{Omar Mohsen\thanks{
 Paris-Saclay University, Orsay, France
-\vskip-2pt E-mail: \href{mailto:omar.mohsen.fr@gmail.com}{\texttt{omar.mohsen.fr@gmail.com}}}}}
-\date{Last update \today}
+\vskip-2pt E-mail: \href{mailto:omar.mohsen.fr@gmail.com}{\texttt{omar.mohsen.fr@gmail.com}}}}
+\date{Last updated on \today}
 \maketitle
 % 19K35 Kasparov theory ($KK$-theory)
 % 19K56 Index theory
