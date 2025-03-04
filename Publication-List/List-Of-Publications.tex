@@ -56,7 +56,7 @@
 
             
 %Bib            
-\usepackage[backend=biber,sorting=ynt,sortcites,autocite=inline, labelnumber=true]{biblatex}%References
+\usepackage[backend=biber,sorting=ynt,sortcites,autocite=inline, labelnumber=true,defernumbers=true]{biblatex}%References
 \addbibresource{../../Mathematics-Documents/GlobalLibrary.bib}            
             
             
@@ -76,6 +76,11 @@
 %\input{PersonalCommands}
 \AtEveryBibitem{\clearfield{url}}
 %\usepackage{refcheck}
+
+\DeclareBibliographyCategory{pub}
+\DeclareBibliographyCategory{prepub}
+\newcommand{\pub}[1]{\addtocategory{pub}{#1}\nocite{#1}}
+\newcommand{\prepub}[1]{\addtocategory{prepub}{#1}\nocite{#1}}
 
 
 \begin{document}
@@ -103,20 +108,24 @@ Paris-Saclay University, Orsay, France
 % 58B34 Noncommutative geometry (�  la Connes)
 % 58H05 Pseudogroups and differentiable groupoids 
 % 93B18 Linearizations
-\nocite{MohsenBlowup}
-  \nocite{MohsenGrpTangent}
-  \nocite{MohsenIndex}
-  \nocite{MohsenIndexMuens}
-  \nocite{MohsenTangentCone}
-  \nocite{MohsenMaxHypo}
-  \nocite{MohsenChernSimons}
-  \nocite{MohsenWitten}
-  \nocite{MohsenConnesShwartz}
- \nocite{MohsenConvolutionSingularFoliations}
- \nocite{MohsenWodizki}
+\pub{MohsenGrpTangent}
+  \pub{MohsenIndexMuens}
+  \pub{MohsenTangentCone}
+  \pub{MohsenChernSimons}
+  \pub{MohsenWitten}
+  \pub{MohsenConnesShwartz}
+ \pub{MohsenConvolutionSingularFoliations}
+ \pub{MohsenWodizki}
+
+
+\prepub{MohsenMaxHypo}
+\prepub{MohsenIndex}
+\prepub{MohsenBlowup}
 
 
 \begin{refcontext}[sorting=nyt]
-\printbibliography[heading=none]
+  \printbibliography[category={pub},title={Publications}]
+  \printbibliography[category={prepub},title={Prépublications}]
+
 \end{refcontext}
 \end{document}
