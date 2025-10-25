@@ -1,0 +1,261 @@
+%------------------------------------------------------------------------------
+% CV in Latex
+% Author : Charles Rambo
+% Based off of: https://github.com/sb2nov/resume and Jake's Resume on Overleaf
+% Most recently updated version may be found at https://github.com/fizixmastr 
+% License : MIT
+%------------------------------------------------------------------------------
+
+\documentclass[A4,11pt]{article}
+%\documentclass[letterpaper,11pt]{article} %For use in US
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{tikz}
+\input{glyphtounicode}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% my added package for map marker
+\usepackage{fontawesome}
+
+
+\input{glyphtounicode}
+
+
+
+%-----FONT OPTIONS-------------------------------------------------------------
+\begin{comment}
+The font of the document will impact not just how readable it is, but how it is
+perceived. In the "The Craft of Scientific Writing" by Michael Alley, shares a
+common fonts for publication as well as their use. I have chosen to use
+Palatino for its legibility, some others are given below. There is far too much
+about typography to discus here. Note: serif fonts have short projecting
+strokes, sans-serif fonts are sans (without) these strokes.
+\end{comment}
+
+
+% serif
+ \usepackage{palatino}
+
+\addtolength{\oddsidemargin}{-1cm}
+\addtolength{\evensidemargin}{-1cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\topmargin}{-1cm}
+\addtolength{\textheight}{2cm}
+
+
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0cm}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\CVItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\CVSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\medi}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#2} & #1 \\
+      \small#3 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\CVSubheadingshort}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\CVSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \text{\small#1} & \text{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubItem}[1]{\CVItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\CVSubHeadingListStart}{\begin{itemize}[leftmargin=0.5cm, label={}]}
+\newcommand{\CVSubHeadingListEnd}{\end{itemize}}
+\newcommand{\CVItemListStart}{\begin{itemize}}
+\newcommand{\CVItemListEnd}{\end{itemize}\vspace{-5pt}}
+\begin{document}
+\begin{minipage}[c]{0.05\textwidth}
+\-\
+\end{minipage}
+\begin{minipage}[c]{0.2\textwidth}
+\begin{tikzpicture}
+    \clip (0,0) circle (1.75cm);
+    \node at (0,-.3) {\includegraphics[width = 5cm]{moi}}; 
+\end{tikzpicture}
+\hfill\vline\hfill
+\end{minipage}
+\begin{minipage}[c]{0.6\textwidth}
+    \textbf{\Huge \scshape{Omar Mohsen}} \\ \vspace{1pt} 
+    \small{\faPhone +33 7 81 32 99 93} \\\small{01 Mars 1996 $|$ Français $|$ Égyptien}\\
+   % \href{mailto:omar.mohsen.fr@gmail.com}{\underline{\faEnvelope\thinspace omar.mohsen.fr@gmail.com}} \\
+   \href{mailto:omar.mohsen@imj-prg.fr}{\underline{\faEnvelope\thinspace omar.mohsen@imj-prg.fr}}\\ \href{https://sites.google.com/view/omar-mohsen-webpage/home}{\underline{\faGoogle\thinspace sites.google.com/view/omar-mohsen-webpage/home}} \\
+   \href{https://github.com/OmarMohsenGit}{\underline{\faGithub \thinspace github.com/OmarMohsenGit}}
+  \end{minipage}
+
+%-----ÉDUCATION----------------------------------------------------------------
+\section{Carrière Scientifique}
+  \CVSubHeadingListStart
+  \CVSubheading
+      {{Professeur}}{Septembre 2025 -- Actuel}
+      {\href{https://www.imj-prg.fr/}{\underline{Université Paris Cité}}}{France}   
+\CVSubheading
+      {{Maître de conférences (poste de recherche/enseignement)}}{Septembre 2021 -- Août 2025}
+      {Université Paris-Saclay}{France}   
+    \CVSubheading
+      {{Postdoctorat}}{Septembre 2019 -- Août 2021}
+      {Université de Münster}{Allemagne}
+        \CVSubheading
+      {{ATER (poste d'enseignement)}}{Octobre 2018 -- Août 2019}
+      {Université Paris Cité}  {France}
+  \CVSubHeadingListEnd
+\section{Formation}
+  \CVSubHeadingListStart
+   \CVSubheading
+      {Habilitation}{2025}
+      {Soutenue le 03 février 2025 à l'Université Paris-Saclay}{France}
+    \CVSubheading
+      {{Doctorat $|$ \emph{\small{Thèse soutenue en octobre 2018 sous la direction de \href{https://webusers.imj-prg.fr/~georges.skandalis/}{\underline{G. Skandalis}}}}}}{2015 -- 2018}
+      {Sorbonne Paris Cité. Plus de détails \href{https://theses.fr/2018USPCC200}{\underline{ici}}}{France}
+    \CVSubheading
+      {{Diplôme de l'ENS}}{2012 -- 2015}
+      {École normale supérieure de Paris}{France}
+    \CVSubheading
+      {Master}{2013 -- 2015}
+      {Université Paris-Saclay}{France}
+  \CVSubHeadingListEnd
+  \section{Distinctions Scientifiques}
+\CVSubHeadingListStart
+\CVSubheadingshort{\href{https://www.bourbaki.fr/TEXTES/Exp1236-Debord.pdf}{\underline{Séminaire Bourbaki 1236 sur nos travaux par C. Debord}}}{2025}{}{}
+\CVSubheadingshort{\href{}{Médaille de la faculté des sciences de l'université du Caire}}{2024}{}{}
+\CVSubheadingshort{\href{https://www.college-de-france.fr/fr/personne/omar-mohsen}{\underline{Prix Peccot du Collège de France}}}{2024}{}{}
+   \CVSubheadingshort{\href{https://www.insmi.cnrs.fr/en/cnrsinfo/prix-academie-des-sciences-2024-mathematiques}{\underline{Prix Jacques Herbrand de l'Académie des sciences française}}}{2024}{}{}
+\CVSubHeadingListEnd
+ 
+\section{Bourses}
+  \CVSubHeadingListStart
+  \CVSubheading
+{\href{}{RIPEC C3}}{2024-2027}{Bourse de recherche}{France}
+\CVSubheading
+{ANR}{2023}
+{\href{https://anr.fr/Project-ANR-23-CE40-0016}{\underline{Membre de l'équipe ANR OPART}}}{France}
+    \CVSubheading
+      {Région Ile de France, FSMP}{2015-2018}
+      {Bourse de doctorat}{France}
+      \CVSubheading
+      {Fondation Sciences Mathématiques de Paris (FSMP)}{2013-2015}
+      {Bourse de Master}{France}
+       \CVSubheading
+      {Fondation Mathématiques Jacques Hadamard (FMJH)}{2012}
+      {Bourse de Licence}{France}
+  \CVSubHeadingListEnd
+  \section{Encadrement (Postdoctorat)}
+  \CVSubHeadingListStart
+  \CVSubheadingshort{Edward Mcdonald}{2025-2027}
+  \CVSubHeadingListEnd
+ \section{Encadrement (Doctorat)}
+  \CVSubHeadingListStart
+  \CVSubheadingshort{Enzo Tanguide}{2025-?}
+  \CVSubheadingshort{Paul Le Breton (co-direction avec C. Debord depuis Sep. 2025)}{2024-?}
+  \CVSubHeadingListEnd
+
+ 
+  \section{Encadrement (Licence et Master)}
+  \CVSubHeadingListStart
+  \CVSubheadingshort{\href{}{Paul Quiñones, Jacques Dubot, Zoé Chantreuil, Traian Demais, Paul Miltgen}}{2025 M1}
+  \CVSubheadingshort{\href{}{Enzo Tanguide}}{2025 M2}
+\CVSubheadingshort{Julie Capron, Oleksii Shulga, Quentin Casella, Enzo Tanguide}{2024 M1}
+\CVSubheadingshort{\href{}{Moudrik Chamoux}}{2024 M2}
+    \CVSubheadingshort{Anatole Dedecker}{2023 M1}
+      \CVSubheadingshort{Matiss Brunel, Quentin Giton, Flore le Roux}{2022 L3}
+  \CVSubHeadingListEnd
+
+
+
+  \section{Évaluation Scientifique}
+  J'ai été rapporteur pour les revues suivantes : Advances in Mathematics, Annales de l'Institut Fourier, Annales Henri Lebesgue, Astérisque, Bulletin des sciences mathématiques, Communications in Partial Differential Equations, Comptes rendus de l'académie des sciences, Crelle journal, Journal of Differential Equations, Journal of Geometric analysis, Journal of Geometry and Physics, Journal of noncommutative geometry, Math. Ann.  , Muenster journal of mathematics, Pacific Journal of Mathematics
+  
+  \section{Responsabilités administratives}
+  \CVSubHeadingListStart
+  \CVSubheadingshort
+{Membre du comité consultatif du laboratoire de mathématiques d'Orsay}{2023-2025}
+  \CVSubHeadingListEnd
+
+
+\section{Responsabilités scientifiques}
+\CVSubHeadingListStart
+ \CVSubheadingshort
+      {\href{https://www.imj-prg.fr/gestion/evenement/affEvenement/74}{Co-organisateur du séminaire d'algèbre d'opérateurs à l'université Paris Cité}}{2025 - Aujourd'hui}
+  
+  \CVSubheadingshort
+      {\href{https://msp.org/apde/about/journal/about.html}{Éditeur de la revue Analysis and PDE}}{2025 - Aujourd'hui}
+  
+
+  \CVSubheading
+{ Centre Bernoulli pour les études fondamentales }{2025}
+{Membre de l'organisation avec F. Nier, S. Shen, T. Lelievre pour le programme "New trends and applications \\ around generalized Fokker-Planck operators".
+Plus de détails \href{https://genfokkerplanck.sciencesconf.org/}{\underline{ici}}}{Suisse}
+
+ \CVSubheadingshort
+      {\href{https://theses.fr/s279397}{\underline{Membre du jury de thèse de Clément Cren sous la direction de J.-M. Lescure}}}{2023 France}
+  \CVSubheadingshort
+      {\href{https://ymcstara.org/current-1.html}{\underline{Co-organisateur de l'école d'été YMC$^*$A}}}{2021 Allemagne}
+      \CVSubheadingshort
+      {Séminaire des doctorants Paris Diderot, membre de l'organisation}{2017 France}
+          \CVSubheading
+      {Groupe de travail sur le théorème de l'indice d'Atiyah-Singer}{2014}
+      {J'ai organisé un GDT à l'ENS suite au « Séminaire sur le théorème de l'indice d'Atiyah-Singer » de R. S. Palais}{}
+   \CVSubHeadingListEnd
+\section{Postes de visite temporaires}
+   \CVSubHeadingListStart
+   \CVSubheadingshort
+        {IHES}{Durée : 6 mois en 2024-2025}
+     \CVSubHeadingListEnd
+
+
+\section{Langues}
+ \begin{itemize}[leftmargin=0.5cm, label={}]
+    \small{\item{Arabe, Anglais, Français}\let\thefootnote\relax\footnotetext{{Dernière mise à jour le \today}}}
+ \end{itemize}
+\end{document}
